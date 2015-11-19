@@ -1,0 +1,21 @@
+<h1> Let's create a new user! </h1>
+
+<%= render 'shared/errors' %>
+
+<form action="/users" method="post">
+
+  <%=form_token%>
+
+  <label>Email :</label>
+  <br>
+  <input type="text" name="user[email]" value="<%=@user.email%>">
+  <br>
+  <label>Password :</label>
+  <br>
+  <input type="password" name="user[password]">
+
+  <br>
+  <br>
+
+  <input type='submit' value="Create!">
+</form>
